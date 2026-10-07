@@ -17,7 +17,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h-small) + 16px); }
+html {  scroll-padding-top: calc(var(--nav-h-small) + 16px); }
 body {
   margin: 0;
   background: var(--bg);

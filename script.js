@@ -11,7 +11,7 @@
   onScroll();
 
     // ---------- Smooth scrolling for in-page links ----------
-  const easeInOutCubic = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+      const easeOutCubic = (t) => -(Math.cos(Math.PI * t) - 1) / 2; // ease-in-out sine: gentle start and gentle stop
   const navSmall = parseInt(getComputedStyle(document.documentElement).getPropertyValue("--nav-h-small"), 10) || 52;
 
   const smoothScrollTo = (targetY) => {
@@ -21,7 +21,7 @@
     const start = performance.now();
     const step = (now) => {
       const p = Math.min((now - start) / duration, 1);
-      window.scrollTo(0, startY + distance * easeInOutCubic(p));
+                 window.scrollTo({ top: startY + distance * easeOutCubic(p), behavior: "instant" }); // "instant" stops CSS smooth-scroll from fighting this
       if (p < 1) requestAnimationFrame(step);
     };
     requestAnimationFrame(step);
