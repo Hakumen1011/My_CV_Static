@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Herman Bantjes | Software Development Student</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div class="bg" aria-hidden="true">
+    <div class="bg__image"></div>
+    <div class="bg__fallback">
+      <div class="bh-glow"></div>
+      <div class="bh-disk"></div>
+      <div class="bh-core"></div>
+    </div>
+    <canvas class="bg__stars" id="stars"></canvas>
+    <div class="bg__shade"></div>
+  </div
+
+
+
+
+
+    <header class="nav">
+    <a href="#home" class="nav__brand">HB<span>.</span></a>
+    <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav__links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+      <a href="assets/Herman_Bantjes_CV.pdf" class="btn btn--small" download>Download CV</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero__text">
+        <p class="hero__eyebrow"><span class="dot"></span> Seeking an internship</p>
+        <h1 class="hero__name">Herman Bantjes</h1>
+        <p class="hero__role">Third-Year Software Development Student</p>
+        <p class="hero__lead">
+          I build full-stack web applications, REST APIs and data-driven systems with C#,
+          JavaScript and Python. Studying a Bachelor of Computing at Belgium Campus iTversity in Pretoria.
+        </p>
+        <div class="hero__actions">
+          <a href="assets/Herman_Bantjes_CV.pdf" class="btn" download>Download CV</a>
+          <a href="#contact" class="btn btn--ghost">Get in touch</a>
+        </div>
+      </div>
+      <div class="hero__photo">
+        <img src="assets/herman.jpg" alt="Portrait of Herman Bantjes" width="560" height="680" />
+      </div>
+      <a href="#about" class="hero__scroll" aria-label="Scroll to About"><span></span></a>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <h2 class="section__title"><span>01</span> About me</h2>
+      <div class="grid grid--about">
+        <div class="card reveal">
+          <p>
+            I'm a third-year <strong>Bachelor of Computing (BComp)</strong> student at Belgium Campus
+            iTversity. I work across the stack, from ASP.NET Core and Express.js back ends to PostgreSQL
+            and MongoDB databases, and I use Docker to containerise and deploy applications.
+          </p>
+          <p>
+            I'm looking for a software development internship, which forms part of the final year of
+            my degree. I want to contribute to a real codebase and learn from an experienced team.
+          </p>
+        </div>
+        <div class="card card--facts reveal">
+          <ul class="facts">
+            <li><span>Location</span>Pretoria, Gauteng</li>
+            <li><span>Looking for</span>Software development internship</li>
+            <li><span>Languages</span>English, Afrikaans</li>
+            <li><span>Transport</span>Code B licence, own reliable vehicle</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+     <!-- SKILLS -->
+    <section class="section" id="skills">
+      <h2 class="section__title"><span>02</span> Skills</h2>
+      <div class="grid grid--skills">
+        <div class="card reveal">
+          <h3>Languages</h3>
+          <ul class="chips">
+            <li>C#</li><li>Java</li><li>JavaScript</li><li>Python</li>
+            <li>SQL</li><li>HTML</li><li>CSS</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <h3>Back end &amp; web</h3>
+          <ul class="chips">
+            <li>ASP.NET Core</li><li>Entity Framework Core</li><li>Node.js</li>
+            <li>Express.js</li><li>RESTful APIs</li><li>MVC architecture</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <h3>Databases &amp; data</h3>
+          <ul class="chips">
+            <li>PostgreSQL</li><li>MongoDB</li><li>Dash</li><li>Plotly</li><li>Jupyter Notebook</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <h3>DevOps &amp; tools</h3>
+          <ul class="chips">
+            <li>Docker</li><li>Git</li><li>GitHub</li><li>Visual Studio</li><li>VS Code</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card strengths reveal">
+        <h3>Strengths</h3>
+        <p>Problem solving &middot; Analytical thinking &middot; Teamwork &middot; Adaptability &middot; Quick learner</p>
+      </div>
+    </section>
+
+     <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <h2 class="section__title"><span>03</span> Projects</h2>
+      <div class="card github reveal">
+        <div class="github__text">
+          <h3>My work lives on GitHub</h3>
+          <p>
+            Academic and personal projects, including full-stack web applications, REST APIs and
+            machine learning dashboards.
+          </p>
+        </div>
+        <a class="btn" href="https://github.com/Hakumen1011" target="_blank" rel="noopener">View github.com/Hakumen1011 &rarr;</a>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <h2 class="section__title"><span>04</span> Experience</h2>
+      <ol class="timeline">
+        <li class="timeline__item reveal">
+          <div class="card">
+            <div class="timeline__head">
+              <h3>Stock Management Assistant</h3>
+              <span class="timeline__date">Jan – Mar 2026, Jul 2026</span>
+            </div>
+            <p class="timeline__org">Seal Centre</p>
+            <ul>
+              <li>Managed inventory and kept stock records accurate and up to date.</li>
+              <li>Supported day-to-day warehouse operations, helping stock stay organised and easy to locate.</li>
+              <li>Worked with a high level of accuracy and attention to detail in a busy business environment.</li>
+              <li>Asked back by the employer in July 2026 to help again for the rest of the month.</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section" id="education">
+      <h2 class="section__title"><span>05</span> Education</h2>
+      <ol class="timeline">
+        <li class="timeline__item reveal">
+          <div class="card">
+            <div class="timeline__head">
+              <h3>Bachelor of Computing (BComp), NQF Level 8</h3>
+              <span class="timeline__date">Expected completion: 2027</span>
+            </div>
+            <p class="timeline__org">Belgium Campus iTversity, Pretoria</p>
+            <ul>
+              <li>3rd year of a four-year degree in software development, programming, databases and mathematics.</li>
+              <li>Hands-on project work in C#, Java, JavaScript and Python, including team-based development.</li>
+              <li>Final year includes a required industry internship.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="timeline__item reveal">
+          <div class="card">
+            <div class="timeline__head">
+              <h3>National Senior Certificate (Grade 12)</h3>
+            </div>
+            <p class="timeline__org">Hoërskool Overkruin, Pretoria</p>
+            <ul class="chips chips--small">
+              <li>Mathematics</li><li>Physical Sciences</li><li>Information Technology</li>
+              <li>Engineering Graphics &amp; Design</li><li>English</li><li>Afrikaans</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <h2 class="section__title"><span>06</span> Contact</h2>
+      <div class="card contact reveal">
+        <p class="contact__lead">I'm looking for an internship where I can contribute to real projects and learn from an experienced team. Let's talk.</p>
+        <div class="contact__grid">
+          <a class="contact__item" href="mailto:hermanbantjes04@gmail.com">
+            <span class="contact__label">Email</span>hermanbantjes04@gmail.com
+          </a>
+          <a class="contact__item" href="tel:+27608134459">
+            <span class="contact__label">Phone</span>060 813 4459
+          </a>
+          <a class="contact__item" href="https://github.com/Hakumen1011" target="_blank" rel="noopener">
+            <span class="contact__label">GitHub</span>github.com/Hakumen1011
+          </a>
+        </div>
+        <div class="hero__actions">
+          <button class="btn" id="copyEmail" type="button" data-email="hermanbantjes04@gmail.com">Copy email</button>
+          <a href="assets/Herman_Bantjes_CV.pdf" class="btn btn--ghost" download>Download CV</a>
+        </div>
+        <p class="contact__note">References available on request.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Herman Bantjes</p>
+    <a href="#home">Back to top &uarr;</a>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+
+</body>
+</html>
