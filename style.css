@@ -267,9 +267,14 @@ a.contact__item:hover { text-decoration: none; border-color: var(--border-hover)
 .toast.is-visible { opacity: 1; transform: translate(-50%, 0); }
 
 /* ---------- Reveal on scroll ---------- */
-.reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease, border-color .3s; }
+.reveal { opacity: 0; transform: translateY(48px); transition: opacity .7s ease, transform .7s ease, border-color .3s; }
 .reveal.is-visible { opacity: 1; transform: none; }
 .project.reveal.is-visible:hover { transform: translateY(-4px); }
+/* Side-by-side blocks slide in from the sides instead of from below */
+.grid--about > .reveal:nth-child(1):not(.is-visible),
+.grid--skills > .reveal:nth-child(odd):not(.is-visible) { transform: translateX(-60px); }  /* left column: from the left */
+.grid--about > .reveal:nth-child(2):not(.is-visible),
+.grid--skills > .reveal:nth-child(even):not(.is-visible) { transform: translateX(60px); }  /* right column: from the right */
 
 /* ---------- Responsive ---------- */
 @media (max-width: 820px) {

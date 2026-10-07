@@ -9,7 +9,7 @@
   const onScroll = () => nav.classList.toggle("is-scrolled", window.scrollY > 20);
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
-  
+
     // ---------- Smooth scrolling for in-page links ----------
   const easeInOutCubic = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
   const navSmall = parseInt(getComputedStyle(document.documentElement).getPropertyValue("--nav-h-small"), 10) || 52;
@@ -17,7 +17,7 @@
   const smoothScrollTo = (targetY) => {
     const startY = window.scrollY;
     const distance = targetY - startY;
-    const duration = Math.min(1200, 450 + Math.abs(distance) * 0.25); // longer trips take a bit longer
+    const duration = Math.min(2000, 800 + Math.abs(distance) * 0.4); // longer trips take a bit longer
     const start = performance.now();
     const step = (now) => {
       const p = Math.min((now - start) / duration, 1);
@@ -67,9 +67,13 @@
   if (reduceMotion || !("IntersectionObserver" in window)) {
     revealEls.forEach((el) => el.classList.add("is-visible"));
   } else {
-    const revealer = new IntersectionObserver((entries, obs) => {
+    const revealer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) { entry.target.classList.add("is-visible"); obs.unobserve(entry.target); }
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");           
+        } else if (entry.boundingClientRect.top > 0) {
+          entry.target.classList.remove("is-visible");         
+        }                                                      
       });
     }, { threshold: 0.12 });
     revealEls.forEach((el) => revealer.observe(el));
